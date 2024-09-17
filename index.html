@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{%  load static  %}
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Hamad AlJassar - Software Engineer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            background: url('your-background-image.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .hero-section > * {
+            position: relative;
+            z-index: 2;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #003366; /* Primary Color */
+        }
+        .about-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+        .about-me img {
+            max-width: 300px; /* Adjust size as needed */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .about-me .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #333; /* Text Color */
+        }
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFF8DC; /* Background color for both experience and education items */
+        }
+        .experience-item, .education-item {
+            border-left: 5px solid #003366; /* Same accent color for both */
+        }
+        .experience-item h4, .education-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #003366; /* Primary Color */
+        }
+        .experience-item p, .education-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333; /* Text Color */
+        }
+        .experience-item span, .education-item span {
+            display: block;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+             
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section" data-aos="fade-in">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="200">Ibrahim Hamad AlJassar</h1>
+            <p data-aos="fade-up" data-aos-delay="400">Software Engineer</p>
+            <p data-aos="fade-up" data-aos-delay="600">Welcome to my personal website!</p>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section bg-light" data-aos="fade-in">
+        <div class="container about-me">
+            <img style="width: 30rem;" src="{% static '/main/images/lol.jpeg' %}" alt="Ibrahim Hamad AlJassar">
+            <div>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">About Me</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="400">Hello! My name is Ibrahim Hamad AlJassar. I am a dedicated software engineer from Hail, Saudi Arabia, with a strong affinity for the winter season. I graduated with a degree in Software Engineering from the University of Hail.</p>
+                <p data-aos="fade-up" data-aos-delay="600">Throughout my academic career, I completed a cooperative training program with Saudi Railways in Riyadh, where I gained valuable hands-on experience in software development and system maintenance. Currently, I am engaged in a Tamheer internship at the Hail Municipality, where I am further refining my skills and contributing to significant IT projects.</p>
+                <p data-aos="fade-up" data-aos-delay="800">Programming and problem-solving are at the heart of my professional interests. I am known for my punctuality, strong work ethic, and collaborative approach. I am committed to continuous learning and always strive to bring innovative solutions and a positive impact to any team or project I am involved in. My goal is to leverage my skills to drive technological advancements and contribute to impactful projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Experience & Education</h2>
+            <div class="education-item" data-aos="fade-up" data-aos-delay="400">
+                <h4>Software Engineering Degree</h4>
+                <p>University of Hail, Saudi Arabia</p>
+                <p><span>Graduation Year:</span> 2024</p>
+                <p>Completed a comprehensive degree in Software Engineering with a focus on programming, software development, and system design.</p>
+            </div>
+            <div class="experience-item" data-aos="fade-up" data-aos-delay="600">
+                <h4>Cooperative Training Program</h4>
+                <p>Saudi Arabia Railways, Riyadh</p>
+                <p><span>Duration:</span> July 5, 2023 - December 1, 2023</p>
+                <p>Gained practical experience in software development and system maintenance. Contributed to various projects and learned valuable industry practices.</p>
+            </div>
+            <div class="experience-item" data-aos="fade-up" data-aos-delay="800">
+                <h4>Tamheer Internship</h4>
+                <p>Hail Municipality</p>
+                <p><span>Position:</span> Software Engineer</p>
+                <p>Participating in an internship program focusing on enhancing technical skills and contributing to ongoing projects in municipal IT support within the Applications Department. Developed and tested several websites, addressing both software bugs and user interface issues. Collaborated with officials and managers to propose and implement development ideas, specifically within the Technical Support site of Hail Municipality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Ibrahim Hamad AlJassar. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200, // Duration of the animation
+            once: true // Whether animation should happen only once - while scrolling down
+        });
+
+        // Change Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark', 'text-light');
+            } else {
+                navbar.classList.remove('bg-dark', 'text-light');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+{% endblock %}
